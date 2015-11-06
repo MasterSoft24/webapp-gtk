@@ -17,7 +17,7 @@ encodings="ru en_US de"
 ABSOLUTE_FILENAME=`readlink -e "$0"`
 DIRECTORY=`dirname "$ABSOLUTE_FILENAME"`
 _dir=$DIRECTORY
-echo $_dir
+
 cd $_dir
 
 

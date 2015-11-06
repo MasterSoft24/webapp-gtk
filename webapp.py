@@ -67,6 +67,7 @@ def webapp_create(button):
 
 
 
+
     # Copy application icon file to application dir
     if ntpath.basename(app_icon_path) != "wa-logo.png":
         app_icon_path_new = work_dir + "/" + ntpath.basename(app_icon_path)
@@ -92,11 +93,14 @@ def webapp_create(button):
                 "Icon=" + app_icon_path + "\n"
                 "Terminal=false\n"
                 "Type=Application\n"
-                "Exec=/usr/bin/python2 /home/ms/PycharmProjects/webapp/webapp.py --webapp --url " + url.get_text() + " --appname=\"" + app_name.get_text() + "\" --apppath=\"" + work_dir + "\"\n"
+                "Exec=webapp --webapp --url " + url.get_text() + " --appname=\"" + app_name.get_text() + "\" --apppath=\"" + work_dir + "\"\n"
                 # "Exec=nemo\r\n"
                 "Categories=Web applications\n"
                 )
     file.write(deskfile)
+
+    file.close()
+    shutil.copyfile(work_dir + "/" + app_name.get_text() + ".desktop", home_dir+"/.local/share/applications/"+app_name.get_text() + ".desktop")
 
     Gtk.main_quit()
 
@@ -159,6 +163,7 @@ def browser_key_press(obj, event):
 locale.setlocale(locale.LC_ALL, '')
 APP = "webapp"
 DIR = "locale"
+DATADIR="/usr/share/"+APP
 
 gettext.bindtextdomain(APP, DIR)
 gettext.textdomain(APP)
@@ -169,6 +174,7 @@ app_icon_path = webapp_dir + "/wa-logo.png"
 
 if not os.path.exists(webapp_dir):
     os.makedirs(webapp_dir)
+    shutil.copyfile("/usr/share/icons/wa-logo.png",app_icon_path)
 
 parser = parser()
 namespace = parser.parse_args()
@@ -259,10 +265,10 @@ if namespace.webapp:# start web application mode
 
 builder = Gtk.Builder()
 builder.set_translation_domain(APP)  # for localize
-builder.add_from_file("data/create-dlg.glade")
+builder.add_from_file(DATADIR+"/create-dlg.glade")
 
 window = builder.get_object("create_dlg")
-window.set_size_request(400, 300)
+window.set_size_request(500, 300)
 window.connect("destroy", Gtk.main_quit)
 
 app_icon = builder.get_object("app_icon")

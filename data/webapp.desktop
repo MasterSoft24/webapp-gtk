@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Web application
+Name[ru]=Web-приложение
+Name[de]=ввпвравр ар
+Comment=WebApp is a small WebKit based tools for a creation simple web application
+Comment[ru]=WebApp - основаная на Webkit программа, для создания web-приложений
+Comment[de]=Reprodução de músicas e emissões last.fm
+Exec=webapp %U
+TryExec=webapp
+Icon=/usr/share/icons/wa-logo.png
+Terminal=false
+Categories=Network;
+StartupNotify=false

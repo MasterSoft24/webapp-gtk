@@ -1,3 +1,5 @@
 .idea/
 dsgn/
-po/locale/*
+po/locale/
+build
+dist
