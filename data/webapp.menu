@@ -1,0 +1,14 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+ "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+<Menu>
+  <Name>Applications</Name>
+  <Menu>
+    <Name>Web applications</Name>
+    <Directory>webapp.directory</Directory>
+    <Include>
+        <Category>Web applications</Category>
+    </Include>
+  </Menu> 
+</Menu>
+<!--/etc/xdg/menus/applications-merged/
+/usr/share/desktop-directories/ -->

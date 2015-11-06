@@ -1,0 +1,63 @@
+# Russian translations for PACKAGE package.
+# Copyright (C) 2015 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-06 16:07+0700\n"
+"PO-Revision-Date: 2015-11-06 12:33+0700\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: data/create-dlg.glade:8
+msgid "Create new Web application"
+msgstr ""
+
+#: data/create-dlg.glade:25
+msgid "OK"
+msgstr "Заебись"
+
+#: data/create-dlg.glade:38
+msgid "Cancel"
+msgstr ""
+
+#: data/create-dlg.glade:103
+msgid "Enter URL"
+msgstr ""
+
+#: data/create-dlg.glade:117
+msgid "Enter web application URL"
+msgstr ""
+
+#: data/create-dlg.glade:119
+msgid "Enter web application URL here"
+msgstr ""
+
+#: data/create-dlg.glade:134
+msgid "Application name"
+msgstr ""
+
+#: data/create-dlg.glade:147
+msgid "Enter Web application name"
+msgstr ""
+
+#: data/create-dlg.glade:149
+msgid "Enter web application name here"
+msgstr ""
+
+#: data/create-dlg.glade:208
+msgid " Description "
+msgstr ""
+
+#: webapp.py:113
+msgid "Please choose a file"
+msgstr ""
