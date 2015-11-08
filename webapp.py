@@ -112,7 +112,7 @@ def select_icon(obj, arg):
 
     if arg.type == Gdk.EventType.BUTTON_PRESS and arg.button == 1:
 
-        dialog = Gtk.FileChooserDialog(_("Please choose a file"), None,
+        dialog = Gtk.FileChooserDialog(_("Please choose a icon file"), None,
                                        Gtk.FileChooserAction.OPEN,
                                        (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
                                         Gtk.STOCK_OPEN, Gtk.ResponseType.OK))
