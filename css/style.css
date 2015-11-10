@@ -1,0 +1,166 @@
+
+
+/*Bootsrap Navbar*/
+.navbar-brand{
+   color:black !important;
+   font-weight: bolder;
+   
+   /* высота по высоте логотипа*/
+   height: 150px; 
+}
+
+.navbar-nav li{
+    -webkit-transition-property: background;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease;
+    
+    transition-property: background;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    
+    /*расположение кнопок навбара - вверху/по середине или внизу*/
+    /*top:0px;*/
+    top:50px;
+    /*top:100px;*/
+}
+
+
+.navbar-toggle{
+     /*расположение "бутерброда" навбара - вверху/по середине или внизу*/
+    /*top:0px;*/
+    top:50px;
+    /*top:100px;*/   
+}
+
+.navbar-nav li:hover{
+      background: #D6D4D4;
+    
+}
+
+
+/************** Sticky header *****************/
+
+.navbar-sticky  {
+/*    position: fixed;
+    top:0;*/
+    /*width: 100%;*/ 
+/*    position: fixed !important;
+    top: 0px;*/
+    /*width: 940px;*/
+    
+}
+
+.navbar-sticky .navbar-nav li{
+
+    
+    /*расположение кнопок навбара - вверху/по середине или внизу*/
+    /*top:0px;*/
+    top:0px;
+    /*top:100px;*/
+    transition: all 0.4s ease;
+}
+
+.navbar-sticky .navbar-brand{
+   color:black !important;
+   font-weight: bolder;
+   
+   /* высота по высоте логотипа*/
+   height: 50px; 
+   transition: all 0.4s ease;
+}
+
+.navbar-sticky .brand-text{
+                /*font-size: 11pt;*/
+                display: none;
+                transition: all 0.4s ease;
+            }
+
+.navbar-sticky .navbar-brand img{
+                margin-top:-10px;
+                height: 40px;
+                transition: all 0.4s ease;
+            }
+
+.navbar-sticky .navbar-toggle{
+                 /*расположение "бутерброда" навбара - вверху/по середине или внизу*/
+                /*top:0px;*/
+                top:0px;
+                /*top:100px;*/   
+                transition: all 0.4s ease;
+            }    
+
+
+            
+            
+            
+
+
+/*Content*/
+
+
+.sidepanel{
+    margin-top: 30px;
+    background-color: #F8F8F8;
+    border: 1px solid rgb(231, 231, 231);
+   border-radius: 4px;
+   padding: 7px;
+   padding-left: 15px;
+}
+
+
+
+.article{
+    text-align: justify;
+}
+
+footer{
+    margin-top: 30px;
+    margin-bottom: 35px;
+   background-color: #F8F8F8;
+   height: 70px;
+   padding: 7px;
+   border-radius: 5px;
+}
+
+
+
+/**********************************************************************************/
+
+/* Small devices (tablets, 750px and up) */
+@media  (max-width: 750px) {
+    
+            .navbar-brand{
+
+
+                /* высота по высоте логотипа*/
+                height: 50px; 
+             }
+
+            .brand-text{
+                /*font-size: 11pt;*/
+                display: none;
+            }
+
+            .navbar-brand img{
+                margin-top:-10px;
+                height: 40px;
+            }
+
+            .navbar-toggle{
+                 /*расположение "бутерброда" навбара - вверху/по середине или внизу*/
+                /*top:0px;*/
+                top:0px;
+                /*top:100px;*/   
+            }    
+
+            .navbar-brand{
+               color:black !important;
+               font-weight: bolder;
+
+               /* высота по высоте логотипа*/
+               /*height: 150px;*/ 
+            }   
+
+
+}
+
