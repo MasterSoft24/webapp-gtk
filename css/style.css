@@ -6,7 +6,30 @@
    font-weight: bolder;
    
    /* высота по высоте логотипа*/
-   height: 150px; 
+   height: 150px;
+
+}
+
+
+.navbar-brand img{
+
+    display:inline;
+}
+
+.brand-text{
+    position:relative;
+    font-size:25pt;
+    display:inline;
+    font-family:Arial;
+    font-weight:bolder;
+    top:10px;
+}
+
+.brand-text div{
+    font-size:15pt;
+    font-weight:normal;
+    font-style:italic;
+    font-family:Times;
 }
 
 .navbar-nav li{
@@ -125,6 +148,17 @@ footer{
 
 
 /**********************************************************************************/
+@media  (max-width: 990px) {
+
+
+            .navbar-nav li{
+                top:0px;
+            }
+
+}
+
+
+
 
 /* Small devices (tablets, 750px and up) */
 @media  (max-width: 750px) {
