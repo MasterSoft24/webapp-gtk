@@ -37,7 +37,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>             
                         </button>
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href=".">
                             <img height="100px" class="zimg-responsive " src="logo.png" />
                             <div class="brand-text" >Web Application<div>Your favorite sites are just a click away</div></div>
                         </a>
@@ -46,8 +46,8 @@
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="#wa-download">Download</a></li>
                             <li><a href="#wa-about">About</a></li>
-                            <li><a href="#">Install</a></li>
-                            <li><a href="#">Change log</a></li>
+                            <li><a href="#wa-install">Install</a></li>
+                            <li><a href="#wa-changelog">Change log</a></li>
                         </ul>
 
                     </div><!--/.nav-collapse -->
@@ -61,7 +61,7 @@
 
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  ">
                     <div class="article">
-                        <div style="display:none" id="wa-download"></div>
+                        <div style="" id="wa-download"></div>
                         <h1 >Download</h1>
                             <p>
                                 <b>Download lastest : </b><a href="https://github.com/MasterSoft24/webapp-gtk/tarball/master" class="download-button tar"><span>tar.gz archive</span></a>
@@ -79,7 +79,7 @@
                     </div>
 
                     <div class="article">
-                        <div style="display:none" id="wa-about"></div>
+                        <div style="" id="wa-about"></div>
                         <h1>About Web Application</h1>
                         <p>
                             Web Application - is a small and simple GTK WebKit based application, which allows you to create so-called Web applications,
@@ -101,6 +101,35 @@
                         </p>
 
                      </div>
+
+                    <div class="article">
+                        <div style="" id="wa-install"></div>
+                        <h1>Install</h1>
+                        <p>
+                           To install the Web Application download the current version of the application.
+                            Unzip it. In a root of the unpacked folder there is a build.sh file.
+                            Obtain root access and run:<br>
+                                <code>./build.sh install</code>
+                            <br/>
+                        </p>
+                        <p>
+                            You also can create an archive with an application for further create a package for your Linux distribution.
+                        </p>
+                        <p>
+                            For this in a root of the unpacked folder there is a build.sh file.
+                            Launch it without parameters:<br/>
+                                <code>./ build.sh</code><br/>
+                            as a result, in the dist folder the archive with application will be saved.
+                        </p>
+
+                     </div>
+
+                    <div class="article">
+                        <div style="" id="wa-changelog"></div>
+                        <h1>Change log</h1>
+                        <div>At this moment any change logs is unavailable</div>
+                    </div>
+
 
                 </div>
 

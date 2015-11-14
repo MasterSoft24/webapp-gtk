@@ -150,9 +150,33 @@ footer{
 /**********************************************************************************/
 @media  (max-width: 990px) {
 
+            .navbar-brand{
+
+
+                /* высота по высоте логотипа*/
+                height: 100px;
+             }
 
             .navbar-nav li{
                 top:0px;
+
+            }
+
+            .brand-text{
+                font-size: 15pt;
+                top:0px;
+            }
+
+            .navbar-brand img{
+                margin-top:-10px;
+                height: 60px;
+            }
+
+            .navbar-toggle{
+                 /*расположение "бутерброда" навбара - вверху/по середине или внизу*/
+                /*top:0px;*/
+                top:20px;
+                /*top:100px;*/
             }
 
 }
