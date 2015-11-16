@@ -4,6 +4,10 @@ WebApp v1.0.0-beta
 Web Application - is a small and simple GTK WebKit based application, which allows you to create so-called Web applications,
 similar of created Epiphany browser or Internet explorer in Windows 7 and above.
 
+Also you can visit our page on http://mastersoft24.github.io/webapp-gtk/
+
+
+
 Requirements:
      - python 2.7
      - webkitgtk
@@ -26,6 +30,8 @@ as a result, in the dist folder the archive with application will be saved.
 Web Application - простое GTK приложение, основаное на WebKit,
 которое позволяет создавать, так называемые, веб-приложения,
 аналогичные создаваемым браузером epiphany или Internet explorer в Windows 7 и выше.
+
+Также, вы пожете посетить нашу страницу на http://mastersoft24.github.io/webapp-gtk/
 
 Требования:
 	- python 2.7
