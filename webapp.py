@@ -187,7 +187,11 @@ if namespace.webapp:# start web application mode
     view = WebKit.WebView()
     #	view.connect("navigation-requested", navrequest)
 
-
+    browser_settings = view.get_settings()
+    #browser_settings.set_property('user-agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1')
+    browser_settings.set_property("enable-media-stream",True)
+    browser_settings.set_property("enable-mediasource",True)
+    view.set_settings(browser_settings)
 
     cookiejar = Soup.CookieJarText.new(namespace.apppath + "/.cookies.txt", False)
 
