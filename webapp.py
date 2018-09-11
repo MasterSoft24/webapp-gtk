@@ -4,8 +4,9 @@
 
 import gi
 
-gi.require_version('WebKit', '3.0')
-from gi.repository import Gtk, WebKit, GdkPixbuf, GObject, Gdk
+gi.require_version('WebKit2', '4.0')
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk, WebKit2, GdkPixbuf, GObject, Gdk
 from gi.repository import Soup
 
 import argparse
@@ -112,7 +113,7 @@ def select_icon(obj, arg):
 
     if arg.type == Gdk.EventType.BUTTON_PRESS and arg.button == 1:
 
-        dialog = Gtk.FileChooserDialog(_("Please choose a icon file"), None,
+        dialog = Gtk.FileChooserDialog(_("Please choose an icon file"), None,
                                        Gtk.FileChooserAction.OPEN,
                                        (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
                                         Gtk.STOCK_OPEN, Gtk.ResponseType.OK))
@@ -184,20 +185,25 @@ wa_config = ConfigParser.ConfigParser()
 
 if namespace.webapp:# start web application mode
 
-    view = WebKit.WebView()
+    view = WebKit2.WebView()
     #	view.connect("navigation-requested", navrequest)
 
     browser_settings = view.get_settings()
-    #browser_settings.set_property('user-agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1')
+    browser_settings.set_property('user-agent', 'Mozilla/5.0 (X11; Linux x86_64; rv:42.0) Gecko/20100101 Firefox/42.0')
     browser_settings.set_property("enable-media-stream",True)
     browser_settings.set_property("enable-mediasource",True)
+    browser_settings.set_property('enable-xss-auditor', False)
     view.set_settings(browser_settings)
 
-    cookiejar = Soup.CookieJarText.new(namespace.apppath + "/.cookies.txt", False)
+    # cookiejar = Soup.CookieJarText.new(namespace.apppath + "/.cookies.txt", False)
+    #
+    # cookiejar.set_accept_policy(Soup.CookieJarAcceptPolicy.ALWAYS)
+    # session = WebKit2.get_default_session()
+    # session.add_feature(cookiejar)
 
-    cookiejar.set_accept_policy(Soup.CookieJarAcceptPolicy.ALWAYS)
-    session = WebKit.get_default_session()
-    session.add_feature(cookiejar)
+    cm = view.get_context().get_cookie_manager()
+    cm.set_persistent_storage(namespace.apppath + "/.cookies.txt",WebKit2.CookiePersistentStorage.TEXT)
+    cm.set_accept_policy(WebKit2.CookieAcceptPolicy.ALWAYS)
 
     sw = Gtk.ScrolledWindow()
     sw.connect("key_press_event", browser_key_press)
@@ -256,7 +262,8 @@ if namespace.webapp:# start web application mode
     win.add(vbox)
     win.show_all()
 
-    view.open(namespace.url)
+    # view.open(namespace.url)
+    view.load_uri(namespace.url)
     Gtk.main()
 
     exit()

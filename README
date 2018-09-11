@@ -1,5 +1,5 @@
-WebApp v1.0.0-beta
-6 November 2015
+WebApp v1.0.0
+11 September 2018
 
 Web Application - is a small and simple GTK WebKit based application, which allows you to create so-called Web applications,
 similar of created Epiphany browser or Internet explorer in Windows 7 and above.
@@ -25,26 +25,3 @@ Launch it without parameters:
     ./ build.sh
 as a result, in the dist folder the archive with application will be saved.
 
-======================================================================================
-
-Web Application - простое GTK приложение, основаное на WebKit,
-которое позволяет создавать, так называемые, веб-приложения,
-аналогичные создаваемым браузером epiphany или Internet explorer в Windows 7 и выше.
-
-Также, вы пожете посетить нашу страницу на http://mastersoft24.github.io/webapp-gtk/
-
-Требования:
-	- python 2.7
-	- webkitgtk
-	- pywebkitgtk
-
-Установка: для установки Web Application скачайте архив с последней версией приложения.
-Распакуйте его. В корне распакованой папки находится файл build.sh. \
-Получите права root и запустите его:
-	./build.sh install
-
-Для сборки архива приложения скачайте архив с последней версией приложения.
-Распакуйте его. В корне распакованой папки находится файл build.sh. \
-Запустите его без параметров:
-	./build.sh
-в результате, в папке dist будет сохранен архив с приложением
