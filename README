@@ -1,17 +1,11 @@
-WebApp v1.0.0
-11 September 2018
+#WebApp v1.1.0
+
+
+2018 October, 29
 
 Web Application - is a small and simple GTK WebKit based application, which allows you to create so-called Web applications,
 similar of created Epiphany browser or Internet explorer in Windows 7 and above.
 
-Also you can visit our page on http://mastersoft24.github.io/webapp-gtk/
-
-
-
-Requirements:
-     - python 2.7
-     - webkitgtk
-     - pywebkitgtk
 
 Installation:
 To install the Web Application download the current version of the application.
