@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import math
-from ConfigParser import ConfigParser
 
 import gi
 import re
@@ -385,7 +384,7 @@ builder.set_translation_domain(APP)  # for localize
 builder.add_from_file(DATADIR + "/create-dlg.glade")
 
 window = builder.get_object("create_dlg")
-window.set_size_request(500, 300)
+window.set_size_request(500, 400)
 window.connect("destroy", Gtk.main_quit)
 
 app_icon = builder.get_object("app_icon")
